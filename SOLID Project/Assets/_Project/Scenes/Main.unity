@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 89753535}
   - component: {fileID: 89753534}
   - component: {fileID: 89753538}
+  - component: {fileID: 89753539}
   m_Layer: 0
   m_Name: Object 2
   m_TagString: Selectable
@@ -238,6 +239,20 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &89753539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89753533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624c1f93d9269614fa4a3c81dd164c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookPercentageLabel: {fileID: 0}
+  LookPercentage: 0
 --- !u!1 &243004856
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +266,7 @@ GameObject:
   - component: {fileID: 243004858}
   - component: {fileID: 243004857}
   - component: {fileID: 243004861}
+  - component: {fileID: 243004862}
   m_Layer: 0
   m_Name: Object 3
   m_TagString: Selectable
@@ -353,6 +369,20 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &243004862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243004856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624c1f93d9269614fa4a3c81dd164c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookPercentageLabel: {fileID: 0}
+  LookPercentage: 0
 --- !u!850595691 &390228005
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -501,6 +531,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1550730621}
   - component: {fileID: 1550730620}
+  - component: {fileID: 1550730622}
+  - component: {fileID: 1550730623}
+  - component: {fileID: 1550730624}
   m_Layer: 0
   m_Name: Selection Manager
   m_TagString: Untagged
@@ -520,9 +553,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1db4ff5c33e9b34f9763faa73a57710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Selectable
-  highlightMaterial: {fileID: 2100000, guid: 76191a502167024488da6dc320d2e35a, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 5a21f72b8943e09419e0e25fa746b43e, type: 2}
 --- !u!4 &1550730621
 Transform:
   m_ObjectHideFlags: 0
@@ -537,6 +567,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1550730622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550730619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce6a72d8881dc940a13d239dc9205ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1550730623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550730619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78906a89f90b0154993bdaec3edac936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1550730624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550730619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9156186341171f64793bfcad8e22bda5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectables:
+  - {fileID: 1671565422}
+  - {fileID: 89753539}
+  - {fileID: 243004862}
+  - {fileID: 1699849481}
+  threshold: 0.97
 --- !u!1 &1671565416
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +622,7 @@ GameObject:
   - component: {fileID: 1671565418}
   - component: {fileID: 1671565417}
   - component: {fileID: 1671565421}
+  - component: {fileID: 1671565422}
   m_Layer: 0
   m_Name: Object 1
   m_TagString: Selectable
@@ -651,6 +724,20 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1671565422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671565416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624c1f93d9269614fa4a3c81dd164c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookPercentageLabel: {fileID: 0}
+  LookPercentage: 0
 --- !u!1 &1699849475
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +751,7 @@ GameObject:
   - component: {fileID: 1699849477}
   - component: {fileID: 1699849476}
   - component: {fileID: 1699849480}
+  - component: {fileID: 1699849481}
   m_Layer: 0
   m_Name: Object 4
   m_TagString: Selectable
@@ -765,3 +853,17 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1699849481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699849475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624c1f93d9269614fa4a3c81dd164c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookPercentageLabel: {fileID: 0}
+  LookPercentage: 0
